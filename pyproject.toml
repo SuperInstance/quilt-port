@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quilt-port"
+version = "0.1.0"
+description = "The user's port to their quilts. Open-source SDK + cost-plus hosted service. Four projections (ESP32 / Python / Web / Ideation); receipts at every step."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Mavis", email = "Mavis@superinstance.dev"},
+    {name = "Casey"},
+]
+keywords = ["quilt", "witness", "substrate", "port", "canon"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"quilt_port" = ["py.typed"]
