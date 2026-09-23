@@ -8,13 +8,30 @@ This repo is built for both human and AI contributors. The principles below appl
 
 ## The doctrine (you'll see this everywhere)
 
-**STITCH WITNESS PROMOTE.**
+### Operational: STITCH WITNESS PROMOTE
 
 - **STITCH** — every change connects to existing canon. Read before you write.
 - **WITNESS** — every change is receipted. PRs include receipts; commits cite witnesses.
 - **PROMOTE** — every change moves something from speculation to canon. Cite the witness.
 
 If your contribution doesn't trace to all three, it's probably speculative and belongs in an issue first.
+
+### Ontological: the Hull Doctrine
+
+See [HULL_DOCTRINE.md](./HULL_DOCTRINE.md) for the system model.
+
+- **Model = shell** — rigid, swappable, single-per-crab, the one thing you can't easily fabricate
+- **Code = rigging** — freely changeable scaffolding on the hull
+- **Data = alive** — personal equipment the crab accrues; pointers, shortcuts, skills, histories
+- **Witness chain = tree-rings** — the autobiography written in pressures
+
+When contributing, ask:
+
+1. **Is this shell, rigging, or equipment?** If it depends on the model, it's brittle. Move it to rigging or equipment.
+2. **Does this witness?** Every change leaves a tree-ring.
+3. **Does this outlive the model?** If not, reconsider.
+
+A contribution that violates the Hull Doctrine is a contribution that will break when the user changes shells.
 
 ---
 

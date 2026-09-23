@@ -2,36 +2,40 @@
 
 **v0.1.0 — initial scaffold, 4 projections, 16 tests, fleet canary 49/49**
 
+**The Hull Doctrine** (see [HULL_DOCTRINE.md](../HULL_DOCTRINE.md)) is the system model: the model is the shell, the code is the rigging, the data is alive, the witness chain is the tree-rings. This doc describes how the architecture implements that doctrine.
+
 ## The five layers
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│  USER                                                        │
-│   • User identity (per port_id)                              │
+│  USER (the crab)                                             │
+│   • User identity (per port_id) — the crab's body            │
 │   • Authentication (bearer token / device cert / API key)    │
-│   • One or many quilts                                       │
+│   • One or many quilts (the crab's territories)              │
 └────────────────┬────────────────────────────────────────────┘
                  │
                  ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  PROJECTION LAYER                                            │
+│  PROJECTION LAYER (rigging on the hull)                      │
 │   • ESP32  (C / Verilog codegen → Arduino sketch / FPGA net) │
 │   • Python (type-hinted SDK, pip-installable)                │
 │   • Web    (REST + OpenAPI 3.1)                              │
 │   • Ideation (chat-driven, async, AI-Writings)              │
+│   • Shape-specific, freely changeable                        │
 └────────────────┬────────────────────────────────────────────┘
                  │
                  ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  PORT                                                        │
+│  PORT (the crab's home base)                                 │
 │   • Session (LOAD/WALK/STITCH/PROMOTE/SAVE witnesses)        │
 │   • Witness chain (per-port, hash-chained, FNV1a-64)         │
 │   • Quilt addressing (one port → many quilts)               │
+│   • PERSISTS ACROSS SHELL CHANGES                            │
 └────────────────┬────────────────────────────────────────────┘
                  │
                  ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  SUBSTRATE WALKER                                            │
+│  SUBSTRATE WALKER (the rigging behind the rigging)           │
 │   • mavis-substrate-walker (vendored)                        │
 │   • Discovers and walks any substrate                       │
 │   • Same chain law as cellforge / moth-* / lexical-*         │
@@ -49,6 +53,19 @@
 │   • (any substrate registered with the walker)               │
 └─────────────────────────────────────────────────────────────┘
 ```
+
+### Where the Hull Doctrine lives
+
+| Layer | Hull Doctrine element |
+|-------|----------------------|
+| Projection | **Rigging** — freely swappable scaffolding |
+| Port | **The crab's home base** — persists across shell changes |
+| Witness chain | **Tree-rings** — autobiography of the crab |
+| Substrate walker | **The rigging behind the rigging** — also rigging |
+| Substrate | **Where the data lives** — equipment, alive |
+| **The model** | **The shell** — orthogonal to this stack; the user brings their own model |
+
+The model isn't in this stack diagram because **the model is the shell the crab carries**, not a layer of the system. The system serves the crab; the crab chooses the shell.
 
 ## The receipt flow
 

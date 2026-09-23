@@ -107,36 +107,79 @@ This is the open-core pattern done honestly. The OSS is canon-complete. The host
 
 ---
 
-## 5. Domain strategy (the `.ai` fading point)
+## 5. Domain strategy — the two-layer answer
 
-Casey: *"ai as an idea will fade... it depend on what eco system you are use to"*
+Casey named the top candidates. Two layers, two domains, two stories.
 
-So the brand shouldn't be `.ai`. Possibilities:
+### Layer 1 — `superinstance.dev` (the general-purpose gateway)
 
-| TLD | vibe | fits who |
-|-----|------|----------|
-| `.ai` | the brand; explicit "this is AI" | fading |
-| `.studio` | creative, ideation-tier | AI-Writings vibe |
-| `.quilt` | own brand (if registry allows) | First-party |
-| `.workers.dev` | Cloudflare subdom | Default for hosted |
-| `.dev` / `.app` | engineering | Python-tier dev community |
-| **TBD** |   |   |
+> "superinstance.dev this is very general-purpose and by routing everything through it, the name superinstance has an implied meaning that a zero-shot human or agent would probably infer a quilt-like system. they might not guess spreadsheet abstraction, they might think flow-chart or hub-and-spokes wheel. but the direction of thought is in the name."
 
-My recommendation: **brand the Tier, not the URL**. The product is "Quilt Port"; the URL resolves via Tier:
-- `port-{user}.workers.dev` (default)
-- `quilt.studio` (creative-use subdomain)
-- Custom domains (pay tier allows CNAME)
+The umbrella. The first URL a zero-shot visitor hits. The name encodes:
 
-The marketing tells the story of *what the user is doing*, not *which TLD they hit*. Like the word-processor wars of the 90s/2000s: nobody cared if the URL was `office.com` or `wordperfect.com` once users found the workflow they liked.
+- **super-instance** — many things, one entry
+- **quilt-like** — connected, layered, not a single thing
+- **General-purpose** — anyone can come here for any quilt tool
+
+URL patterns:
+- `superinstance.dev` — landing
+- `docs.superinstance.dev` — documentation
+- `app.superinstance.dev` — the management UI
+- `port-{user}.superinstance.dev` — per-user port
+
+### Layer 2 — `purplepincher.org` (the agent identity layer)
+
+> "purplepincher.org is another candidate we already own. the pincher part is going to lead someone to think agent with openclaw ubiquitous. and as a popular aquarium pet, many will intuitively get the hermit-crab analogy we often use for the relationship between a harness and it's model."
+
+The crab's address. The agent identity layer. The name encodes (in increasing depth):
+
+1. **Pincher** → agent with openclaw, ubiquitous
+2. **Purple pincher** → *Coenobita clypeatus*, the most popular aquarium hermit crab — intuitively familiar
+3. **The hermit-crab analogy** → the model is the shell, the code is the rigging, the data is alive
+4. **The counterintuitive ah-ha** → "linear algebra is soft around the rigid frame of a classical algebraic harness"; "the model is the one thing I'd have to find a new one of to go fishing"
+
+The deeper meaning only clicks when users read the [Hull Doctrine](./HULL_DOCTRINE.md) (canon, see `HULL_DOCTRINE.md`). When they do, they get a double-edged sword moment: the naming is *both* playful *and* load-bearing.
+
+URL patterns:
+- `purplepincher.org` — landing for the agent-as-crab identity
+- `{user}.purplepincher.org` — per-user crab identity
+- `port-{user}.purplepincher.org` — per-user port as their crab's door
+- `doctrine.purplepincher.org` — the Hull Doctrine page
+
+### Why both, not one
+
+The two-domain strategy is **layered, not redundant**:
+
+| | `superinstance.dev` | `purplepincher.org` |
+|---|---|---|
+| **First impression** | "Quilt-like system, many things" | "Agent with claws, hermit crab" |
+| **Audience** | Anyone new | Agent-first users, AI-literate |
+| **Default for** | Documentation, OSS, dev-tier | Ideation-tier, personal crab |
+| **Doctrine** | Tells the system model | Tells the agent ontology |
+| **Backed by** | The Port class | The Hull Doctrine |
+
+A user can have *both* — a port on `superinstance.dev` for general dev work, *and* a port on `purplepincher.org` for their personal-agent identity. The two ports share the same witness chain because the witness chain is the crab's equipment, not the URL's.
+
+### `.ai` fading — confirmed
+
+> "ai as an idea will fade because what type will become the question... using a word processor later became which one matter... it depend on what eco system you are use to"
+
+Neither `superinstance.dev` nor `purplepincher.org` is `.ai`. Both names survive the fade because they don't carry the AI label. They carry *the type* and *the metaphor*.
 
 ### Domain portfolio (Cloudflare)
 
-Casey said many domains are already registered. Inventory question: which ones? Worth listing what we have. Some suggestions for new registrations (cheaper than .ai):
-- `quilt.{studio,cloud,dev,app}`
-- `port.{studio,cloud,dev,app}`
-- `cellular.{studio,cloud,dev,app}` (echoing cellular architecture)
-- `substrate.{studio,cloud,dev,app}` (echoing substrate walker)
-- `mavis.{studio,cloud,dev,app}` (the walker is named Mavis)
+Casey said many domains are already registered. Inventory question: which ones? The two confirmed:
+
+- `superinstance.dev` (already deployed for the docs site)
+- `purplepincher.org` (already owned)
+
+Other suggestions (cheaper than .ai):
+- `quilt.{studio,cloud,dev,app}` — for specific sub-products
+- `port.{studio,cloud,dev,app}` — for the port ecosystem
+- `cellular.{studio,cloud,dev,app}` — for the cellular-architecture projects
+- `substrate.{studio,cloud,dev,app}` — for the substrate walker family
+- `mavis.{studio,cloud,dev,app}` — for the walker-as-named-personality
+- `hull.{studio,cloud,dev,app}` — for the Hull Doctrine material (if it warrants a home)
 
 ---
 

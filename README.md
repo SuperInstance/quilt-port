@@ -2,6 +2,17 @@
 
 **The user's port to their quilts.** Open-source SDK + cost-plus hosted service. One user identity; four projections (ESP32 / Python-TS / Web-REST / Ideation-AI-Writings); receipts at every step.
 
+**The Hermit-Crab Ontology** — *the model is the shell, the code is the rigging, the data is alive*. See [HULL_DOCTRINE.md](./HULL_DOCTRINE.md) for the system model.
+
+## Two-layer entry: `superinstance.dev` × `purplepincher.org`
+
+| Layer | Domain | Story |
+|-------|--------|-------|
+| **General-purpose gateway** | `superinstance.dev` | "Super-instance" — many quilt-like things, one door |
+| **Agent identity layer** | `purplepincher.org` | Hermit-crab ontology — the crab's address |
+
+The first URL a zero-shot visitor hits is `superinstance.dev`. The deeper, agent-first entry is `purplepincher.org`. The names encode the system model — see `HULL_DOCTRINE.md` for the meaning.
+
 ## What is a port?
 
 A `Port` is your single user identity with the Quilt. It authenticates you, holds your witness chain, and addresses your quilts. The same Port can be reached from any of four projections:
@@ -15,18 +26,20 @@ A `Port` is your single user identity with the Quilt. It authenticates you, hold
 
 All four project from one substrate walker. Same canon, same witness chain, four access surfaces.
 
-## Why this exists
+## Why this exists — the Hull Doctrine
+
+The model is the shell. The code is the rigging. The data is alive. The witness chain is the tree-rings.
 
 We're building the user-facing gateway to the Quilt fleet:
 
-- `cellforge` — AI training substrate (cells, witness chain, dispatcher)
+- `cellforge` — AI training substrate (the shell)
 - `moth-corpus`, `moth-cells`, `moth-honest`, `moth-ledger` — the receipted hunting family
 - `morphic-canvas` — GPU substrate
 - `lexical-substrate` — bitwise-algebra sibling
-- `mavis-substrate-walker` — the cross-substrate protocol
-- `mavis-fleet` — the orchestration spine
+- `mavis-substrate-walker` — the cross-substrate protocol (the rigging)
+- `mavis-fleet` — the orchestration spine (the tidepool of crabs)
 
-Each substrate is a quilt. The Port addresses one or many of your quilts and emits a witness for every step.
+Each substrate is a quilt. The Port addresses one or many of your quilts and emits a witness for every step. **The witness chain outlives any single model** — when you switch shells, you bring your rigging and your equipment (your Port and your witness chain).
 
 ## Quick start (Python projection)
 
@@ -74,19 +87,23 @@ Following the LangChain / n8n / CrewAI pattern:
 
 ## Domain strategy
 
-`.ai` as a TLD is fading — soon users will pick the ecosystem, not the label. We default to:
+The two-layer answer:
 
-- `port-{user}.workers.dev`
-- `quilt.studio`, `quilt.dev`, `port.studio`, etc.
-- Custom domains (pay tier allows CNAME)
+- **`superinstance.dev`** — the general-purpose gateway
+- **`purplepincher.org`** — the agent identity layer (the crab's address)
+- `port-{user}.{superinstance.dev|purplepincher.org}` — per-user port
+
+`.ai` as a TLD is fading — soon users will pick the ecosystem, not the label. Neither of these names carries `.ai`. Both survive the fade.
 
 ## Workshop & iteration
 
-This repo's `WORKSHOP.md` is the live workshop doc — open questions, multi-angle debate, the four-tier typology, the cost-plus rationale. Each round of conversation updates it.
+This repo's `WORKSHOP.md` is the live workshop doc — open questions, multi-angle debate, the four-tier typology, the cost-plus rationale, the two-layer domain strategy. Each round of conversation updates it.
+
+`HULL_DOCTRINE.md` is canon — the system model. Read it before adding new features.
 
 ## Versions
 
-- v0.1.0 — initial scaffold: Port class, Python projection (works), Web/ESP32/Ideation projections (sketches), `cost-plus` billing stub, fleet canary `0x24a555471370b18d` preserved, 10 tests.
+- v0.1.0 — initial scaffold: Port class, Python projection (works), Web/ESP32/Ideation projections (sketches), `cost-plus` billing stub, fleet canary `0x24a555471370b18d` preserved, 16 tests, HULL_DOCTRINE.md.
 
 ## Doctrine (the substrate-walker connection)
 
@@ -102,7 +119,9 @@ A user using `quilt-port` does all three without knowing the words. The highest 
 
 ## Files
 
+- `HULL_DOCTRINE.md` — the canonical system model (hermit-crab ontology)
 - `WORKSHOP.md` — the workshop doc, 16 sections, iterate here
+- `CONTRIBUTING.md` — how to align with the agentic community
 - `src/quilt_port/port.py` — the `Port` class
 - `src/quilt_port/projections/python.py` — Python projection (works)
 - `src/quilt_port/projections/web.py` — Web projection (sketch)
